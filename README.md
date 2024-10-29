@@ -12,6 +12,7 @@ Contoh:
 - src/app/folder/folder.page.scss
 ### Menambahkan kode HTML
 #### a. Komponen ion-header dan ion-toolbar
+```html
   <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -20,6 +21,7 @@ Contoh:
     <ion-title>{{ folder }}</ion-title>
   </ion-toolbar>
 </ion-header>
+```
 
 - ion-header: Menampilkan header di bagian atas halaman.
 - ion-toolbar: Digunakan untuk menampung tombol dan judul.
@@ -27,10 +29,13 @@ Contoh:
 - ion-title: Menampilkan judul halaman dengan menggunakan variabel {{ folder }}.
 
 #### b. Komponen Search Bar (ion-searchbar)
+```html
 <ion-searchbar placeholder="Search students..." showCancelButton="focus"></ion-searchbar>
+```
 Komponen ion-searchbar ditambahkan untuk membuat area pencarian. Properti placeholder digunakan untuk memberikan teks petunjuk dalam kolom pencarian, dan showCancelButton="focus" menampilkan tombol pembatalan saat kolom aktif.
 
 ### c.  Komponen List (ion-list dan ion-item)
+```html
 <ion-list>
   <ion-item>
     <ion-label>Profile</ion-label>
@@ -45,12 +50,14 @@ Komponen ion-searchbar ditambahkan untuk membuat area pencarian. Properti placeh
     <ion-icon name="log-out" slot="end"></ion-icon>
   </ion-item>
 </ion-list>
+```
 
 Komponen ion-list berfungsi untuk membuat daftar item. Setiap item di dalam daftar didefinisikan dengan ion-item, yang berisi:
 ion-label: Menampilkan teks utama dari item.
 ion-icon: Menampilkan ikon di sebelah kanan.
 
 ### d. Komponen Card (ion-card, ion-card-header, ion-card-title, dan ion-card-content)
+```html
 <ion-card class="custom-card">
   <ion-card-header>
     <ion-card-title>Welcome, Nadhifa Zahra!</ion-card-title>
@@ -72,12 +79,14 @@ ion-icon: Menampilkan ikon di sebelah kanan.
     </ion-item>
   </ion-card-content>
 </ion-card>
+```
 
 Komponen ion-card digunakan untuk menampilkan informasi dalam bentuk kartu. Di dalamnya terdapat:
 ion-card-header, ion-card-title, dan ion-card-subtitle untuk judul dan deskripsi.
 ion-card-content: Menyimpan isi kartu, seperti avatar dan data personal.
 
 ### Menata komponen di CSS
+```css
 #container {
   padding: 16px;
 }
@@ -104,7 +113,7 @@ ion-list {
   display: flex;
   flex-direction: column;
 }
-
+```
 Setiap komponen memiliki beberapa aturan gaya, seperti:
 ion-searchbar dan ion-list memiliki margin bawah untuk pemisahan visual.
 .custom-card menata kartu dengan radius dan bayangan.
@@ -113,4 +122,6 @@ ion-searchbar dan ion-list memiliki margin bawah untuk pemisahan visual.
 
 ## 3. Menjalankan aplikasi
 Setelah selesai menambahkan dan menata komponen, jalankan aplikasi dengan perintah:
+```bash
 ionic serve
+```
